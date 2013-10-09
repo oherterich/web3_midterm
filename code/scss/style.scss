@@ -1,0 +1,49 @@
+$orange: #EA6045;
+$yellow: #F8CA4D;
+$beige: #F5E5C0;
+$blue: #3F5666;
+$navy: #2F3440;
+$black: #111111;
+
+* { margin: 0; padding: 0;}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+header {
+	background-color: $black;
+	position: fixed;
+	width: 100%;
+	height: 75px;
+}
+
+#main {
+	padding-top: 70px;
+}
+
+.grid {
+	width: 12.5%;
+	height: 100%;
+	padding-bottom: 12.5%;
+	float: left;
+	margin: 0;
+	background-image: no-repeat center center;
+}
+
+.lager {
+	background-color: $orange;
+}
+
+.ale {
+	background-color: $yellow;
+}
+
+.belgian {
+	background-color: $blue;
+}
+
+.porter {
+	background-color: $navy;
+}

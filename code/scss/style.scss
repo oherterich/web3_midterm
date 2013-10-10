@@ -26,6 +26,32 @@ body {
 	transition: opacity 5s;
 }
 
+#overlay .extrainfo-hidden {
+	height: 0%;
+	width: 0%;
+	position: relative;
+	/*top: 0;
+	left: 0;*/
+	background-color: yellow;
+	opacity: 0.0;
+
+	transition: opacity 0.5s ease-in-out;
+
+
+}
+
+#overlay .extrainfo-visible {
+	height: 75%;
+	width: 16.666666%;
+	position: relative;
+	/*top: 0;
+	left: 0;*/
+	background-color: yellow;
+	opacity: 1.0;
+
+	transition: opacity 0.5s ease-in-out;
+}
+
 .is-hidden {
 	display: none;
 	opacity: 0.0;

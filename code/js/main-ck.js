@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 /*$document.ready(function(){
-=======
 
-
->>>>>>> 4fded2c17c2439a131fe457ebeda9d01a75ed126
 	var key = '0bd1d2d41d65047dadb0ce85c999d9cd';
 	var url = 'http://api.brewerydb.com/v2/?key='+key;
 	
@@ -39,22 +35,4 @@
 
 
 
-<<<<<<< HEAD
-)};*/
-
-var overlay = document.getElementById('overlay');
-
-var grid = document.getElementsByClassName('grid');
-
-for (var i = 0; i < grid.length; i++) {
-	var s = grid.item(i);
-	s.addEventListener('click', function(evt) {
-		overlay.classList.remove('is-hidden');
-	});
-}
-
-overlay.addEventListener('click', function(evt) {
-	overlay.classList.add('is-hidden');
-});
-=======
->>>>>>> 4fded2c17c2439a131fe457ebeda9d01a75ed126
+)};*/var overlay=document.getElementById("overlay"),extrainfo=document.getElementById("extrainfo"),grid=document.getElementsByClassName("grid");for(var i=0;i<grid.length;i++){var s=grid.item(i);s.addEventListener("click",function(e){overlay.classList.remove("is-hidden");extrainfo.classList.remove("extrainfo-hidden");extrainfo.classList.add("extrainfo-visible");var t=this.offsetTop/window.innerHeight*100,n=this.offsetLeft/window.innerWidth*100;extrainfo.style.top=t+"%";extrainfo.style.left=n+"%"})}overlay.addEventListener("click",function(e){overlay.classList.add("is-hidden");extrainfo.classList.add("extrainfo-hidden");extrainfo.classList.remove("extrainfo-visible")});extrainfo.addEventListener("click",function(e){overlay.classList.add("is-hidden");extrainfo.classList.add("extrainfo-hidden");extrainfo.classList.remove("extrainfo-visible")});

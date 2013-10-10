@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 /*$document.ready(function(){
-=======
 
-
->>>>>>> 4fded2c17c2439a131fe457ebeda9d01a75ed126
 	var key = '0bd1d2d41d65047dadb0ce85c999d9cd';
 	var url = 'http://api.brewerydb.com/v2/?key='+key;
 	
@@ -39,10 +35,10 @@
 
 
 
-<<<<<<< HEAD
 )};*/
 
 var overlay = document.getElementById('overlay');
+var extrainfo = document.getElementById('extrainfo');
 
 var grid = document.getElementsByClassName('grid');
 
@@ -50,11 +46,30 @@ for (var i = 0; i < grid.length; i++) {
 	var s = grid.item(i);
 	s.addEventListener('click', function(evt) {
 		overlay.classList.remove('is-hidden');
+
+		extrainfo.classList.remove('extrainfo-hidden');
+		extrainfo.classList.add('extrainfo-visible');
+
+		var top = (this.offsetTop / window.innerHeight) * 100;
+		var left = (this.offsetLeft / window.innerWidth) * 100;
+		
+		/*console.log(document.body.clientHeight);
+		console.log(top + " " + left);*/
+
+		extrainfo.style.top = top + "%";
+		extrainfo.style.left = left + "%";
 	});
 }
 
 overlay.addEventListener('click', function(evt) {
 	overlay.classList.add('is-hidden');
+	
+	extrainfo.classList.add('extrainfo-hidden');
+	extrainfo.classList.remove('extrainfo-visible');
 });
-=======
->>>>>>> 4fded2c17c2439a131fe457ebeda9d01a75ed126
+
+extrainfo.addEventListener('click', function(evt) {
+	overlay.classList.add('is-hidden');
+	
+	extrainfo.classList.add('extrainfo-hidden');
+	extrainfo.classList.remove('extrainfo-visible');});

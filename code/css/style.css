@@ -6,19 +6,24 @@ body {
   width: 100%;
   height: 100%; }
 
-header {
-  background-color: #111111;
+#overlay {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 75px; }
+  height: 100%;
+  background-color: #111111;
+  opacity: 0.7;
+  transition: opacity 5s; }
 
-#main {
-  padding-top: 70px; }
+.is-hidden {
+  display: none;
+  opacity: 0.0; }
 
 .grid {
-  width: 12.5%;
   height: 100%;
-  padding-bottom: 12.5%;
+  width: 16.666666%;
+  padding-bottom: 16.666666%;
   float: left;
   margin: 0;
   background-image: no-repeat center center; }
@@ -34,3 +39,11 @@ header {
 
 .porter {
   background-color: #2f3440; }
+
+#title {
+  height: 100%;
+  width: 66.666666%;
+  padding-bottom: 16.666666%;
+  float: left;
+  margin: 0;
+  background-color: white; }

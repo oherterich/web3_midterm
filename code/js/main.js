@@ -45,31 +45,37 @@ var grid = document.getElementsByClassName('grid');
 for (var i = 0; i < grid.length; i++) {
 	var s = grid.item(i);
 	s.addEventListener('click', function(evt) {
-		overlay.classList.remove('is-hidden');
+		overlay.classList.remove('overlay-hidden');
+		overlay.classList.add('overlay-visible');
+
 
 		extrainfo.classList.remove('extrainfo-hidden');
 		extrainfo.classList.add('extrainfo-visible');
 
+		//Set position of extra information box
 		var top = (this.offsetTop / window.innerHeight) * 100;
 		var left = (this.offsetLeft / window.innerWidth) * 100;
-		
-		/*console.log(document.body.clientHeight);
-		console.log(top + " " + left);*/
 
 		extrainfo.style.top = top + "%";
 		extrainfo.style.left = left + "%";
+
+		//Populate extra information box with specific info
+		var innerInfo = this.querySelector('.beerinfo').innerHTML;
+		extrainfo.innerHTML = innerInfo;
 	});
 }
 
 overlay.addEventListener('click', function(evt) {
-	overlay.classList.add('is-hidden');
-	
+	overlay.classList.add('overlay-hidden');
+	overlay.classList.remove('overlay-visible');
+
 	extrainfo.classList.add('extrainfo-hidden');
 	extrainfo.classList.remove('extrainfo-visible');
 });
 
 extrainfo.addEventListener('click', function(evt) {
-	overlay.classList.add('is-hidden');
+	overlay.classList.add('overlay-hidden');
+	overlay.classList.remove('overlay-visible');
 	
 	extrainfo.classList.add('extrainfo-hidden');
 	extrainfo.classList.remove('extrainfo-visible');});

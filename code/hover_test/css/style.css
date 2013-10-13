@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  width: 100%;
+  height: 100%; }
+
+#main {
+  padding-top: 70px; }
+
+.grid {
+  width: 12.5%;
+  height: 100%;
+  padding-bottom: 12.5%;
+  float: left;
+  margin: 0;
+  background-image: no-repeat center center;
+  overflow: hidden; }
+  .grid .grid_inside {
+    position: absolute;
+    width: 12.5%;
+    padding-bottom: 12.5%;
+    background: url("../img/beer_orange.png");
+    transition: all 0.5s ease-in-out; }
+    .grid .grid_inside:hover {
+      background: url("../img/beer_orangeBLACK.png"); }
+  .grid #grid_hover {
+    transition: all 1.5s ease-in-out;
+    position: absolute;
+    width: 12.5%;
+    padding-bottom: 0;
+    background: white;
+    margin-top: 12.5%; }
+    .grid #grid_hover p.liquid {
+      background: #F8CA4D;
+      position: absolute;
+      width: 100%;
+      height: 75%;
+      top: 25%; }
+
+.lager {
+  background-color: #993b31; }
+
+.ale {
+  background-color: #f8ca4d; }
+
+.belgian {
+  background-color: #3f5666; }
+
+.porter {
+  background-color: #2f3440;
+  background: url("../img/beer_blue.png"); }

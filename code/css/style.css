@@ -1,15 +1,15 @@
-@font-face {
-  font-family: wisdom;
-  src: url("../fonts/WisdomScriptAJ.otf"); }
-
 * {
   margin: 0;
   padding: 0; }
 
 body {
   width: 100%;
-  height: 100%;
-  font-family: wisdom; }
+  height: 100%; }
+
+#pussyJSON {
+  width: 100%;
+  min-height: 100px;
+  background: lime; }
 
 .overlay-visible {
   position: absolute;

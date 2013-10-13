@@ -1,4 +1,4 @@
-	var json = [
+	var beers = [
 	{"currentPage":1,"numberOfPages":496,"totalResults":24762,"data":[ {"id":"cBLTUw","name":"\"18\"
 	{"Imperial IPA","description":"Hop Heads this one's for you!  Checking in with 143 IBU's this
 	{"ale punches you in the mouth with extreme bitterness then rounds out with toffee flavors and

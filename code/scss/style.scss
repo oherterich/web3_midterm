@@ -5,18 +5,24 @@ $blue: #3F5666;
 $navy: #2F3440;
 $black: #111111;
 
-@font-face
-{
-	font-family: wisdom;
-	src: url('../fonts/WisdomScriptAJ.otf');
-}
+// @font-face
+// {
+// 	font-family: wisdom;
+// 	src: url('../fonts/WisdomScriptAJ.otf');
+// }
 
 * { margin: 0; padding: 0;}
 
 body {
 	width: 100%;
 	height: 100%;
-	font-family: wisdom;
+	// font-family: wisdom;
+}
+
+#pussyJSON	{
+	width: 100%;
+	min-height: 100px; 
+	background: lime;
 }
 
 #main {

@@ -78,4 +78,7 @@ extrainfo.addEventListener('click', function(evt) {
 	overlay.classList.remove('overlay-visible');
 	
 	extrainfo.classList.add('extrainfo-hidden');
-	extrainfo.classList.remove('extrainfo-visible');});
+	extrainfo.classList.remove('extrainfo-visible');
+});
+
+

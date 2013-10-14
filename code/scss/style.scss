@@ -6,177 +6,195 @@ $black: #111111;
 
 // @font-face
 // {
-// 	font-family: wisdom;
-// 	src: url('../fonts/WisdomScriptAJ.otf');
-// }
+	// 	font-family: wisdom;
+	// 	src: url('../fonts/WisdomScriptAJ.otf');
+	// }
 
-* { margin: 0; padding: 0;}
+	* { margin: 0; padding: 0;}
 
-body {
-	width: 100%;
-	height: 100%;
-	// font-family: wisdom;
-}
-
-#test	{
-	width: 100%;
-	min-height: 100px; 
-	background: lime;
-}
-
-#main {
-}
-
-.overlay-visible {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: $black;
-	opacity: 0.7;
-	transition: opacity .5s;
-}
-
-.overlay-hidden {
-	position: absolute;
-	top: -99999px;
-	left: -99999px;
-	opacity: 0.0;
-	transition: opacity .5s;
-}
-
-.extrainfo-hidden {
-	height: 0%;
-	width: 0%;
-	position: absolute;
-	top: -99999px;
-	left: -99999px;
-	background-color: yellow;
-	opacity: 0.0;
-}
-
-.extrainfo-visible {
-	height: 75%;
-	width: 16.666666%;
-	position: absolute;
-	background-color: yellow;
-	opacity: 1.0;
-	display: block;
-	transition: height 0.5s ease-out, opacity 0.8s ease-out;
-}
-
-.is-hidden {
-	position: none;
-}
-
-.grid {
-	height: 100%;
-	width: 16.666666%;
-	padding-bottom: 16.666666%;
-	float: left;
-	margin: 0;
-	background: no-repeat center center;
-	overflow: hidden;
-}
-
-.grid-hover {
-	position: absolute;
-	width: 16.666666%;
-	padding-bottom: 0.0%;
-	margin-top: 16.666666%;
-	float: left;
-
-	transition: all 0.6s;
-
-	.foam {
-		position: absolute;
+	body {
 		width: 100%;
 		height: 100%;
-		float: left;
-		margin: 0;
-		background-color: #F8CA4D;
+		// font-family: wisdom;
 	}
 
-	.liquid {
-		position: absolute;
+	#test	{
 		width: 100%;
-		height: 25%;
+		min-height: 100px; 
+		background: lime;
+	}
+
+	#main {
+	}
+
+	.overlay-visible {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $black;
+		opacity: 0.7;
+		transition: opacity .5s;
+	}
+
+	.overlay-hidden {
+		position: absolute;
+		top: -99999px;
+		left: -99999px;
+		opacity: 0.0;
+		transition: opacity .5s;
+	}
+
+	.extrainfo-hidden {
+		height: 0%;
+		width: 0%;
+		position: absolute;
+		top: -99999px;
+		left: -99999px;
+		background-color: yellow;
+		opacity: 0.0;
+	}
+
+	.extrainfo-visible {
+		height: 75%;
+		width: 16.666666%;
+		position: absolute;
+		background-color: yellow;
+		opacity: 1.0;
+		display: block;
+		transition: height 0.5s ease-out, opacity 0.8s ease-out;
+	}
+
+	.is-hidden {
+		position: none;
+	}
+
+	.grid {
+		height: 100%;
+		width: 16.666666%;
+		padding-bottom: 16.666666%;
 		float: left;
 		margin: 0;
-		background-color: white;
+		background: no-repeat center center;
+		overflow: hidden;
 	}
-}
 
-.grid-inside {
-	position: absolute;
-	width: 16.666666%;
-	padding-bottom: 16.666666%;
-	float: left;
-	margin: 0;
-	background: no-repeat center center;
-}
+	.grid-hover {
+		position: absolute;
+		width: 16.666666%;
+		padding-bottom: 0.0%;
+		margin-top: 16.666666%;
+		float: left;
 
-.beerinfo {
-	display: none;
-}
+		transition: all 0.6s;
 
-.lager {
-	background: $orange;
-	background-size: 100%;
-
-
-	.grid-inside {
-	background: url('../img/beer_orange.png');
-	background-size: 100%;
-
-		&:hover{
-			background: url('../img/beer_orangeBLACK.png');
-			background-size: 100%;
+		.foam {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			float: left;
+			margin: 0;
+			background-color: #F8CA4D;
 		}
 
+		.liquid {
+			position: absolute;
+			width: 100%;
+			height: 25%;
+			float: left;
+			margin: 0;
+			background-color: white;
+		}
+	}
+
+	.grid-inside {
+		position: absolute;
+		width: 16.666666%;
+		padding-bottom: 16.666666%;
+		float: left;
+		margin: 0;
+		background: no-repeat center center;
+	}
+
+	.beerinfo {
+		display: none;
+	}
+
+	.lager {
+		background: $orange;
+		background-size: 100%;
+
+
+		.grid-inside {
+			background: url('../img/beer_orange.png');
+			background-size: 100%;
+
+			&:hover{
+				background: url('../img/beer_orangeBLACK.png');
+				background-size: 100%;
+			}
 			transition: background 0.6s;
-
-	}
-}
-
-.ale {
-	background: $yellow;
-	background-size: 100%;
-
-	.grid-inside {
-	background: url('../img/beer_yellow.png');
-	background-size: 100%;
-	}
-}
-
-.belgian {
-	background: $blue;
-	background-size: 100%;
-
-	.grid-inside {
-	background: url('../img/beer_blue.png');
-	background-size: 100%;
+		}
 	}
 
-}
+	.ale {
+		background: $yellow;
+		background-size: 100%;
 
-.porter {
-	background: $navy;
-	background-size: 100%;
+		.grid-inside {
+			background: url('../img/beer_yellow.png');
+			background-size: 100%;
 
-	.grid-inside {
-	background: url('../img/beer_darkblue.png');
-	background-size: 100%;
+				&:hover{
+			background: url('../img/beer_yellowBLACK.png');
+			background-size: 100%;
+		}
+		transition: background 0.6s;
+		}
 	}
-}
 
-#title {
-	height: 100%;
-	width: 66.666666%;
-	padding-bottom: 16.666666%;
-	float: left;
-	margin: 0;
-	background: url('../img/logo.png') no-repeat #221f1f;
-	background-size: 100%;
-}
+	.belgian {
+		background: $blue;
+		background-size: 100%;
+
+		.grid-inside {
+			background: url('../img/beer_blue.png');
+			background-size: 100%;
+		
+		&:hover{
+			background: url('../img/beer_blueBLACK.png');
+			background-size: 100%;
+		}
+		transition: background 0.6s;
+		}
+
+
+	}
+
+	.porter {
+		background: $navy;
+		background-size: 100%;
+
+		.grid-inside {
+			background: url('../img/beer_darkblue.png');
+			background-size: 100%;
+				&:hover{
+			background: url('../img/beer_darkblueBLACK.png');
+			background-size: 100%;
+		}
+		transition: background 0.6s;
+		}
+
+
+	}
+
+	#title {
+		height: 100%;
+		width: 66.666666%;
+		padding-bottom: 16.666666%;
+		float: left;
+		margin: 0;
+		background: url('../img/logo.png') no-repeat #221f1f;
+		background-size: 100%;
+	}

@@ -34,17 +34,26 @@ body {
   position: absolute;
   top: -99999px;
   left: -99999px;
-  background-color: yellow;
   opacity: 0.0; }
 
 .extrainfo-visible {
   height: 75%;
   width: 16.666666%;
   position: absolute;
-  background-color: yellow;
   opacity: 1.0;
   display: block;
   transition: height 0.5s ease-out, opacity 0.8s ease-out; }
+
+#extrainfo {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #111111;
+  color: #fff; }
+  #extrainfo h1 {
+    padding: 3%; }
+  #extrainfo h3 {
+    padding: 3%; }
+  #extrainfo p {
+    padding: 3%; }
 
 .is-hidden {
   position: none; }
@@ -100,20 +109,36 @@ body {
 .beerinfo {
   display: none; }
 
-.lager {
+.hefe {
+  background-color: #993b31;
   background: #993b31;
   background-size: 100%; }
-  .lager .grid-inside {
+  .hefe .grid-inside {
     background: url("../img/beer_orange.png") no-repeat;
     background-size: 100%;
     color: #993b31;
     transition: background 0.6s; }
-    .lager .grid-inside:hover {
+    .hefe .grid-inside:hover {
+      background: url("../img/beer_orangeBLACK.png") no-repeat;
+      background-size: 100%;
+      color: #F8CA4D; }
+
+.pilsner {
+  background-color: #993b31;
+  background: #993b31;
+  background-size: 100%; }
+  .pilsner .grid-inside {
+    background: url("../img/beer_orange.png") no-repeat;
+    background-size: 100%;
+    color: #993b31;
+    transition: background 0.6s; }
+    .pilsner .grid-inside:hover {
       background: url("../img/beer_orangeBLACK.png") no-repeat;
       background-size: 100%;
       color: #F8CA4D; }
 
 .ale {
+  background-color: #af8746;
   background: #af8746;
   background-size: 100%; }
   .ale .grid-inside {
@@ -124,18 +149,20 @@ body {
       background: url("../img/beer_yellowBLACK.png") no-repeat;
       background-size: 100%; }
 
-.belgian {
+.pale {
+  background-color: #5f8899;
   background: #5f8899;
   background-size: 100%; }
-  .belgian .grid-inside {
+  .pale .grid-inside {
     background: url("../img/beer_blue.png") no-repeat;
     background-size: 100%;
     transition: background 0.6s; }
-    .belgian .grid-inside:hover {
+    .pale .grid-inside:hover {
       background: url("../img/beer_blueBLACK.png") no-repeat;
       background-size: 100%; }
 
 .porter {
+  background-color: #697587;
   background: #697587;
   background-size: 100%; }
   .porter .grid-inside {
@@ -143,6 +170,30 @@ body {
     background-size: 100%;
     transition: background 0.6s; }
     .porter .grid-inside:hover {
+      background: url("../img/beer_darkblueBLACK.png") no-repeat;
+      background-size: 100%; }
+
+.stout {
+  background-color: #697587;
+  background: #697587;
+  background-size: 100%; }
+  .stout .grid-inside {
+    background: url("../img/beer_darkblue.png") no-repeat;
+    background-size: 100%;
+    transition: background 0.6s; }
+    .stout .grid-inside:hover {
+      background: url("../img/beer_darkblueBLACK.png") no-repeat;
+      background-size: 100%; }
+
+.other {
+  background-color: #697587;
+  background: #697587;
+  background-size: 100%; }
+  .other .grid-inside {
+    background: url("../img/beer_darkblue.png") no-repeat;
+    background-size: 100%;
+    transition: background 0.6s; }
+    .other .grid-inside:hover {
       background: url("../img/beer_darkblueBLACK.png") no-repeat;
       background-size: 100%; }
 

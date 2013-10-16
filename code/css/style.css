@@ -8,12 +8,8 @@
 
 body {
   width: 100%;
-  height: 100%; }
-
-#test {
-  width: 100%;
-  min-height: 100px;
-  background: lime; }
+  height: 100%;
+  font-family: wisdom; }
 
 .overlay-visible {
   position: absolute;

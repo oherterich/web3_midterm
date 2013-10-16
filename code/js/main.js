@@ -175,12 +175,22 @@ for (var i = 0; i < grid.length; i++) {
 
 		//Populate extra information box with specific info
 		 var thisBeer = this.innerHTML;
-		// var beerClasses = this.classList;
-		// var specificBeer = beerClasses[1];
-		// extrainfo.classList.add(specificBeer);
 
-		var innerInfo = thisBeer + this.querySelector('.beerinfo').innerHTML;
-		extrainfo.innerHTML = innerInfo;
+		 //Remove previous beer image
+		 var img = extrainfo.getElementsByTagName('img');
+		 //extrainfo.removeChild();
+
+		 //Add the correct beer image
+		 var beerStyle = this.classList[1];
+		 var beerImage = document.createElement( 'img' );
+		 beerImage.src = 'img/beer_' + beerStyle + ".png";
+		 extrainfo.appendChild(beerImage);
+
+		//Add the corresponding beer information
+		var innerInfo = this.getElementsByClassName('beerinfo');
+		var beerinfo = document.createElement( 'div' );
+		beerinfo.innerHTML = innerInfo[0].innerHTML;
+		extrainfo.appendChild(beerinfo);
 
 	});
 }

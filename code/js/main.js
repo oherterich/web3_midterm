@@ -36,7 +36,6 @@ for(var i=0; i < data.length; i++){
 	grid_inside.appendChild(beerTitle);
 
 
-
 	//creating beer-info 
 	var beerinfo =document.createElement('div');
 	beerinfo.className = 'beerinfo';
@@ -51,8 +50,7 @@ for(var i=0; i < data.length; i++){
 
 	if (data[i].description) {
 		beerdescription.innerHTML = data[i].description;
-	}
-	else {
+	} else {
 		beerdescription.innerHTML = 'No description is available.';
 	}
 
@@ -61,8 +59,7 @@ for(var i=0; i < data.length; i++){
 
 	if (data[i].abv) {
 		abv.innerHTML = 'ABV: ' + data[i].abv + '%';
-	}
-	else {
+	} else {
 		abv.innerHTML = 'No alcohol percentage is available.';
 	}
 
@@ -71,46 +68,31 @@ for(var i=0; i < data.length; i++){
 	 var stylename = data[i].style.name;
 	 beerstyle.innerHTML = 'Style: ' + stylename;
 
-	 //Search for Ale
-	 var ale = stylename.search("Ale");
+	//Search styles
+	var ale = stylename.search("Ale");
+	var pale = stylename.search("Pale");
+	var sto= stylename.search("Stout");
+	var port = stylename.search("Porter");
+	var hefe = stylename.search("Hefe");
+	var pils = stylename.search("Pilsner");
+	console.log(pils);
+
 	 if (ale != -1) {
 	 	grid.classList.add('ale');
+	 } else if (sto != -1) {
+	 	grid.classList.add('stout');
+	 } else if (port != -1) {
+	 	grid.classList.add('porter');
+	 } else if (hefe != -1) {
+	 	grid.classList.add('hefe');
+	 } else	if (pils != -2) {  // i didnt get this! why i had to put -2 in order to work?? where is this number coming from? #owenisoncrack
+	 	grid.classList.add('pilsner');
+	 } else {
+	 	grid.classList.add('other');
 	 }
 
-	 //Search for Pale Ale
-	 var pale = stylename.search("Pale");
 	 if (pale != -1) {
 	 	grid.classList.add('pale');
-	 }
-
-	 //Search for Stout
-	 var sto= stylename.search("Stout");
-	 if (sto != -1) {
-	 	grid.classList.add('stout');
-	 }
-
-	 //Search for Porter
-	 var port = stylename.search("Porter");
-	 if (port != -1) {
-	 	grid.classList.add('porter');
-	 }
-
-	 //Search for Hefe
-	 var hefe = stylename.search("Hefe");
-	 if (hefe != -1) {
-	 	grid.classList.add('hefe');
-	 }
-
-	 //Search for Pilsner
-	 var pils = stylename.search("Pilsner");
-	 if (pils != -1) {
-	 	grid.classList.add('pilsner');
-	 }
-
-	 //Search for Pilsner
-	 var other = stylename.search("Meh");
-	 if (other != -1) {
-	 	grid.classList.add('other');
 	 }
 
 
@@ -149,9 +131,8 @@ var body = document.getElementsByTagName('body');
 var html = document.getElementsByTagName('html');
 overlay.style.height = document.height + "px";
 
+
 //   <--*<--*<--*<--*<--* CLICK DROP INFO *-->*-->*-->*-->*-->
-
-
 var overlay = document.getElementById('overlay');
 var extrainfo = document.getElementById('extrainfo');
 

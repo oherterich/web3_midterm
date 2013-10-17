@@ -98,7 +98,7 @@ body {
   background: no-repeat center center; }
   .grid-inside p.beerName {
     position: absolute;
-    font-size: 16px;
+    font-size: 1.2em;
     text-align: center;
     width: 90%;
     padding-left: 5%;
@@ -110,92 +110,96 @@ body {
   display: none; }
 
 .hefe {
-  background-color: #993b31;
-  background: #993b31;
+  background-color: #af8746;
   background-size: 100%; }
   .hefe .grid-inside {
-    background: url("../img/beer_orange.png") no-repeat;
+    background: url("../img/hefe.png") no-repeat;
     background-size: 100%;
-    color: #993b31;
+    color: #af8746;
     transition: background 0.6s; }
     .hefe .grid-inside:hover {
-      background: url("../img/beer_orangeBLACK.png") no-repeat;
+      background: url("../img/hefe_active.png") no-repeat;
       background-size: 100%;
-      color: #F8CA4D; }
+      color: #f8ca4d; }
+
+.other {
+  background-color: #cbbda0;
+  background-size: 100%; }
+  .other .grid-inside {
+    background: url("../img/others.png") no-repeat;
+    background-size: 100%;
+    color: #cbbda0;
+    transition: background 0.6s; }
+    .other .grid-inside:hover {
+      background: url("../img/others_active.png") no-repeat;
+      background-size: 100%;
+      color: #f8ca4d; }
 
 .pilsner {
-  background-color: #993b31;
-  background: #993b31;
-  background-size: 100%; }
-  .pilsner .grid-inside {
-    background: url("../img/beer_orange.png") no-repeat;
-    background-size: 100%;
-    color: #993b31;
-    transition: background 0.6s; }
-    .pilsner .grid-inside:hover {
-      background: url("../img/beer_orangeBLACK.png") no-repeat;
-      background-size: 100%;
-      color: #F8CA4D; }
-
-.ale {
   background-color: #af8746;
   background: #af8746;
   background-size: 100%; }
-  .ale .grid-inside {
-    background: url("../img/beer_yellow.png") no-repeat;
+  .pilsner .grid-inside {
+    background: url("../img/pilsner.png") no-repeat;
     background-size: 100%;
+    color: #af8746;
+    transition: background 0.6s; }
+    .pilsner .grid-inside:hover {
+      background: url("../img/pilsner_active.png") no-repeat;
+      background-size: 100%;
+      color: #f8ca4d; }
+
+.ale {
+  background-color: #993b31;
+  background-size: 100%; }
+  .ale .grid-inside {
+    background: url("../img/ale.png") no-repeat;
+    background-size: 100%;
+    color: #993b31;
     transition: background 0.6s; }
     .ale .grid-inside:hover {
-      background: url("../img/beer_yellowBLACK.png") no-repeat;
-      background-size: 100%; }
+      background: url("../img/ale_active.png") no-repeat;
+      background-size: 100%;
+      color: #f8ca4d; }
 
 .pale {
-  background-color: #5f8899;
-  background: #5f8899;
+  background-color: #993b31;
   background-size: 100%; }
   .pale .grid-inside {
-    background: url("../img/beer_blue.png") no-repeat;
+    background: url("../img/paleAle.png") no-repeat;
     background-size: 100%;
+    color: #993b31;
     transition: background 0.6s; }
     .pale .grid-inside:hover {
-      background: url("../img/beer_blueBLACK.png") no-repeat;
-      background-size: 100%; }
+      background: url("../img/paleALe_active.png") no-repeat;
+      background-size: 100%;
+      color: #f8ca4d; }
 
 .porter {
   background-color: #697587;
-  background: #697587;
   background-size: 100%; }
   .porter .grid-inside {
-    background: url("../img/beer_darkblue.png") no-repeat;
+    background: url("../img/porter.png") no-repeat;
     background-size: 100%;
+    color: #697587;
     transition: background 0.6s; }
     .porter .grid-inside:hover {
-      background: url("../img/beer_darkblueBLACK.png") no-repeat;
-      background-size: 100%; }
+      background: url("../img/porter_active.png") no-repeat;
+      background-size: 100%;
+      color: #F8CA4D; }
 
 .stout {
   background-color: #697587;
-  background: #697587;
   background-size: 100%; }
   .stout .grid-inside {
-    background: url("../img/beer_darkblue.png") no-repeat;
+    background: url("../img/stout.png") no-repeat;
     background-size: 100%;
+    color: #697587;
     transition: background 0.6s; }
     .stout .grid-inside:hover {
-      background: url("../img/beer_darkblueBLACK.png") no-repeat;
-      background-size: 100%; }
-
-.other {
-  background-color: #697587;
-  background: #697587;
-  background-size: 100%; }
-  .other .grid-inside {
-    background: url("../img/beer_darkblue.png") no-repeat;
-    background-size: 100%;
-    transition: background 0.6s; }
-    .other .grid-inside:hover {
-      background: url("../img/beer_darkblueBLACK.png") no-repeat;
-      background-size: 100%; }
+      background: url("../img/stout_active.png") no-repeat;
+      background-size: 100%;
+      color: #F8CA4D; }
 
 #title {
   height: 100%;

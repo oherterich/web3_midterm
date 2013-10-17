@@ -75,7 +75,6 @@ for(var i=0; i < data.length; i++){
 	var port = stylename.search("Porter");
 	var hefe = stylename.search("Hefe");
 	var pils = stylename.search("Pilsner");
-	console.log(pils);
 
 	 if (ale != -1) {
 	 	grid.classList.add('ale');
@@ -141,6 +140,7 @@ var grid = document.getElementsByClassName('grid');
 for (var i = 0; i < grid.length; i++) {
 	var s = grid.item(i);
 	s.addEventListener('click', function(evt) {
+		extrainfo.innerHTML = ""; //clear the div inside extrainfo! dont accumulate other infos....
 		overlay.classList.remove('overlay-hidden');
 		overlay.classList.add('overlay-visible');
 
@@ -164,7 +164,7 @@ for (var i = 0; i < grid.length; i++) {
 		 //Add the correct beer image
 		 var beerStyle = this.classList[1];
 		 var beerImage = document.createElement( 'img' );
-		 beerImage.src = 'img/beer_' + beerStyle + ".png";
+		 beerImage.src = 'img/' + beerStyle + "_active.png";
 		 extrainfo.appendChild(beerImage);
 
 		//Add the corresponding beer information
@@ -175,6 +175,13 @@ for (var i = 0; i < grid.length; i++) {
 
 	});
 }
+
+var title = document.getElementById('title');
+// main_section.appendChild(test);
+main_section.insertBefore(title,main_section.childNodes[8]);
+// main_section.childNodes[7].style.background = 'pink';
+// main_section.childNodes[8].style.background = 'blue';
+
 
 overlay.addEventListener('click', function(evt) {
 	overlay.classList.add('overlay-hidden');

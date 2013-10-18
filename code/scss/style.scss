@@ -130,7 +130,7 @@ body {
 
 	p.beerName{
 		position: absolute;
-		font-size: 1.2em;
+		font-size: 1.1em;
 		text-align: center;
 		width: 90%;
 		padding-left: 5%;
@@ -285,5 +285,6 @@ body {
 	padding-bottom: 16.666666%;
 	float: left;
 	margin: 0;
-	background: lime;	
+	background: lime;
+	transition: all 0.5s;	
 }

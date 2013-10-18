@@ -178,12 +178,14 @@ for (var i = 0; i < grid.length; i++) {
 
 var title = document.getElementById('title');
 // main_section.appendChild(test);
-main_section.insertBefore(title,main_section.childNodes[8]);
+main_section.insertBefore(title,main_section.childNodes[7]);
 // main_section.childNodes[7].style.background = 'pink';
 // main_section.childNodes[8].style.background = 'blue';
 
 
 overlay.addEventListener('click', function(evt) {
+	extrainfo.innerHTML = ""; //clear the div inside extrainfo! dont accumulate other infos....
+
 	overlay.classList.add('overlay-hidden');
 	overlay.classList.remove('overlay-visible');
 
@@ -192,6 +194,8 @@ overlay.addEventListener('click', function(evt) {
 });
 
 extrainfo.addEventListener('click', function(evt) {
+	extrainfo.innerHTML = ""; //clear the div inside extrainfo! dont accumulate other infos....
+
 	overlay.classList.add('overlay-hidden');
 	overlay.classList.remove('overlay-visible');
 	
@@ -199,4 +203,7 @@ extrainfo.addEventListener('click', function(evt) {
 	extrainfo.classList.remove('extrainfo-visible');
 });
 
+
+// var test = document.getElementById('test');
+// test.style.width=40+"%";
 

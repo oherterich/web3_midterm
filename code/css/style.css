@@ -65,7 +65,10 @@ body {
   float: left;
   margin: 0;
   background: no-repeat center center;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
 
 .grid-hover {
   position: absolute;
@@ -73,7 +76,8 @@ body {
   padding-bottom: 0.0%;
   margin-top: 16.666666%;
   float: left;
-  transition: all 0.6s; }
+  transition: all 0.6s;
+  background-color: lime; }
   .grid-hover .foam {
     position: absolute;
     width: 100%;
@@ -204,11 +208,12 @@ body {
 #title {
   height: 100%;
   width: 66.666666%;
-  padding-bottom: 16.666666%;
+  padding-bottom: 16.66666%;
   float: left;
   margin: 0;
-  background: url("../img/logo.png") no-repeat #221f1f;
-  background-size: 100%; }
+  background: url("../img/title.png") no-repeat #221f1f center;
+  background-size: 100%;
+  background-color: lime; }
 
 #test {
   height: 100%;

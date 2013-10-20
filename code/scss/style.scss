@@ -91,6 +91,9 @@ body {
 	margin: 0;
 	background: no-repeat center center;
 	overflow: hidden;
+	 -webkit-user-select: none;
+	 -moz-user-select: none;
+	 -ms-user-select: none;
 }
 
 .grid-hover {
@@ -100,6 +103,7 @@ body {
 	margin-top: 16.666666%;
 	float: left;
 	transition: all 0.6s;
+	background-color: lime;
 
 	.foam {
 		position: absolute;
@@ -210,8 +214,8 @@ body {
 			background: url('../img/ale_active.png') no-repeat;
 			background-size: 100%;
 			color: $cActive;
-	}
-	transition: background 0.6s;
+		}
+		transition: background 0.6s;
 	}
 }
 
@@ -270,11 +274,12 @@ body {
 #title {
 	height: 100%;
 	width: 66.666666%;
-	padding-bottom: 16.666666%;
+	padding-bottom: 16.66666%;
 	float: left;
 	margin: 0;
-	background: url('../img/logo.png') no-repeat #221f1f;
+	background: url('../img/title.png') no-repeat #221f1f center;
 	background-size: 100%;
+	background-color: lime;
 }
 
 

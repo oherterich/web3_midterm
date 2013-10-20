@@ -1,0 +1,1 @@
+var grid=document.getElementsByClassName("grid");for(var i=0;i<grid.length;i++){var s=grid.item(i);s.addEventListener("mouseover",function(e){var t=this.querySelector(".grid-hover");t.style.height="30%";t.style.marginTop=0});s.addEventListener("mouseout",function(e){var t=this.querySelector(".grid-hover");t.style.height="0%";t.style.marginTop="16.666666%"})};

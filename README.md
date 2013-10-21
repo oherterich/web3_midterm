@@ -6,17 +6,18 @@ Web 3 Midterm project for Owen Herterich &amp; Gustavo Faria
 
 ====================================================================================
 
-[ gus ] make the extra info box work</br>
+[ DONE ] make the extra info box work</br>
 [ gus ] add footer</br>
-[ check ] fix the hover on the top of the element</br>
-[ check ] wierd black line inside the logo div</br>
-[ check ] fix the shitty yellow color</br> 
+[ DONE ] fix the hover on the top of the element</br>
+[ DONE ] wierd black line inside the logo div</br>
+[ DONE ] fix the shitty yellow color</br> 
 
-[ owen ] fix the size of the font
-[ owen ] fix the overlay to fit the whole body
-[ owen ] the close extrainfo button
-[ owen ] style the extra info content
+[ DONE ] fix the size of the font
+[ DONE ] fix the overlay to fit the whole body
+[ DONE ] the close extrainfo button
+[ DONE ] style the extra info content
 [ owen ] drink whiskey
+[ DONE ] "other" category is not showing up
 
 [ owen + gus ] make it responsive
 [ owen + gus ] be responsible

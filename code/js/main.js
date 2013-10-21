@@ -45,17 +45,8 @@ for(var i=0; i < data.length; i++){
 	var beerName = document.createElement('h1');
 	beerName.innerHTML = data[i].name;
 
-	//Beer description
-	var beerdescription = document.createElement('p');
-
-	if (data[i].description) {
-		beerdescription.innerHTML = data[i].description;
-	} else {
-		beerdescription.innerHTML = 'No description is available.';
-	}
-
 	//Beer ABV
-	var abv = document.createElement('h3');
+	var abv = document.createElement('p');
 
 	if (data[i].abv) {
 		abv.innerHTML = 'ABV: ' + data[i].abv + '%';
@@ -68,13 +59,22 @@ for(var i=0; i < data.length; i++){
 	 var stylename = data[i].style.name;
 	 beerstyle.innerHTML = 'Style: ' + stylename;
 
+	//Beer description
+	var beerdescription = document.createElement('p');
+
+	if (data[i].description) {
+		beerdescription.innerHTML = data[i].description;
+	} else {
+		beerdescription.innerHTML = 'No description is available.';
+	}
+
 	//Search styles
 	var ale = stylename.search("Ale");
 	var pale = stylename.search("Pale");
 	var sto= stylename.search("Stout");
 	var port = stylename.search("Porter");
 	var hefe = stylename.search("Hefe");
-	var pils = stylename.search("Pilsner");
+	var pils = stylename.search("Pils");
 
 	 if (ale != -1) {
 	 	grid.classList.add('ale');
@@ -84,7 +84,7 @@ for(var i=0; i < data.length; i++){
 	 	grid.classList.add('porter');
 	 } else if (hefe != -1) {
 	 	grid.classList.add('hefe');
-	 } else	if (pils != -2) {  // i didnt get this! why i had to put -2 in order to work?? where is this number coming from? #owenisoncrack
+	 } else	if (pils != -1) {  // i didnt get this! why i had to put -2 in order to work?? where is this number coming from? #owenisoncrack
 	 	grid.classList.add('pilsner');
 	 } else {
 	 	grid.classList.add('other');
@@ -93,15 +93,13 @@ for(var i=0; i < data.length; i++){
 	 if (pale != -1) {
 	 	grid.classList.add('pale');
 	 }
-
-
-
-	 //console.log(i + " " + data[i].style.name + " | Ale: " + ale + " | Stout: " + sto + " | Port: " + port + " | Pale Ale: " + pale);
+	 var name = data[i].name;
+	 console.log(name + " " + ale + " " + pale + " " + sto + " " + port + " " + hefe + " " + pils);
 
 	beerinfo.appendChild(beerName);
-	beerinfo.appendChild(beerdescription);
 	beerinfo.appendChild(abv);
 	beerinfo.appendChild(beerstyle);
+	beerinfo.appendChild(beerdescription);	
 }
 
 //CREATE OVERLAY
@@ -116,6 +114,7 @@ var extrainfo = document.createElement( 'div' );
 extrainfo.className = 'extrainfo-hidden';
 extrainfo.id = 'extrainfo'
 main_section.appendChild(extrainfo);
+console.log(extrainfo);
 
 
 //SET VARIABLE
@@ -140,47 +139,47 @@ var grid = document.getElementsByClassName('grid');
 for (var i = 0; i < grid.length; i++) {
 	var s = grid.item(i);
 	s.addEventListener('click', function(evt) {
-		extrainfo.innerHTML = ""; //clear the div inside extrainfo! dont accumulate other infos....
-		overlay.classList.remove('overlay-hidden');
-		overlay.classList.add('overlay-visible');
 
-		extrainfo.classList.remove('extrainfo-hidden');
-		extrainfo.classList.add('extrainfo-visible');
+		if (window.innerWidth > 480) {
+			extrainfo.innerHTML = ""; //clear the div inside extrainfo! dont accumulate other infos....
 
-		//Set position of extra information box
-		var top = (this.offsetTop / window.innerHeight) * 100;
-		var left = (this.offsetLeft / window.innerWidth) * 100;
+			overlay.classList.remove('overlay-hidden');
+			overlay.classList.add('overlay-visible');
 
-		extrainfo.style.top = top+ "%";
-		extrainfo.style.left = left + "%";
+			extrainfo.classList.remove('extrainfo-hidden');
+			extrainfo.classList.add('extrainfo-visible');
 
-		//Populate extra information box with specific info
-		 var thisBeer = this.innerHTML;
+			//Add the close button. Needs to be added every time because we are clearing the HTML
+			var closebutton = document.createElement( 'div' );
+			closebutton.id = 'closebutton';
+			extrainfo.appendChild(closebutton);
 
-		 //Remove previous beer image
-		 var img = extrainfo.getElementsByTagName('img');
-		 //extrainfo.removeChild();
+			//Add the corresponding beer information
+			var innerInfo = this.getElementsByClassName('beerinfo');
+			var beerinfo = document.createElement( 'div' );
+			beerinfo.innerHTML = innerInfo[0].innerHTML;
+			extrainfo.appendChild(beerinfo);
+		}
 
-		 //Add the correct beer image
-		 var beerStyle = this.classList[1];
-		 var beerImage = document.createElement( 'img' );
-		 beerImage.src = 'img/' + beerStyle + "_active.png";
-		 extrainfo.appendChild(beerImage);
+		//FOR MOBILE ONLY
+		if (window.innerWidth <= 480) {
+			var beerinfo = this.getElementsByClassName('beerinfo');
+			beerinfo = beerinfo[0];
+			beerinfo.style.width = "100%";
+			beerinfo.style.height = "100%";
+			beerinfo.style.opacity = "1.0";
 
-		//Add the corresponding beer information
-		var innerInfo = this.getElementsByClassName('beerinfo');
-		var beerinfo = document.createElement( 'div' );
-		beerinfo.innerHTML = innerInfo[0].innerHTML;
-		extrainfo.appendChild(beerinfo);
+			var top = beerinfo.offsetTop;
+			console.log(top);
+			beerinfo.style.top = top + "px";
+			beerinfo.style.left = "0px";
+		}
 
 	});
 }
 
 var title = document.getElementById('title');
-// main_section.appendChild(test);
 main_section.insertBefore(title,main_section.childNodes[7]);
-// main_section.childNodes[7].style.background = 'pink';
-// main_section.childNodes[8].style.background = 'blue';
 
 
 overlay.addEventListener('click', function(evt) {
@@ -204,6 +203,8 @@ extrainfo.addEventListener('click', function(evt) {
 });
 
 
-// var test = document.getElementById('test');
-// test.style.width=40+"%";
+//REORDER DIVS WHEN BROWSER RESIZES
+if (window.innerWidth <= 480) {
+	main_section.insertBefore(title, main_section.childNodes[0]);
+}
 

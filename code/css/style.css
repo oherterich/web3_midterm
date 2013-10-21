@@ -2,6 +2,14 @@
   font-family: 'wisdom';
   src: url("../fonts/WisdomScriptAJ.otf"); }
 
+@font-face {
+  font-family: 'Futura-Regular';
+  src: url("../fonts/FuturaLT.ttf"); }
+
+@font-face {
+  font-family: 'Futura-Bold';
+  src: url("../fonts/FuturaLT-Bold.ttf"); }
+
 * {
   margin: 0;
   padding: 0; }
@@ -18,7 +26,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #111111;
-  opacity: 0.7;
+  opacity: 0.6;
   transition: opacity .5s; }
 
 .overlay-hidden {
@@ -37,23 +45,42 @@ body {
   opacity: 0.0; }
 
 .extrainfo-visible {
-  height: 75%;
-  width: 16.666666%;
-  position: absolute;
+  height: 400px;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -250px;
+  border-radius: 3px;
+  position: fixed;
   opacity: 1.0;
   display: block;
   transition: height 0.5s ease-out, opacity 0.8s ease-out; }
 
 #extrainfo {
-  font-family: Helvetica, Arial, sans-serif;
   background-color: #111111;
-  color: #fff; }
+  color: #F8CA4D;
+  overflow: scroll; }
   #extrainfo h1 {
-    padding: 3%; }
-  #extrainfo h3 {
-    padding: 3%; }
+    font-family: wisdom;
+    margin: 8%;
+    margin-bottom: 0;
+    padding-bottom: 1%;
+    border-bottom: 1px solid #F8CA4D; }
   #extrainfo p {
-    padding: 3%; }
+    font-family: Futura-Regular;
+    margin: 2% 8%; }
+
+#closebutton {
+  background-image: url("../img/closebutton.png");
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  left: 50%;
+  margin-left: 220px;
+  margin-top: 10px; }
+  #closebutton:hover {
+    background-image: url("../img/closebutton-hover.png"); }
 
 .is-hidden {
   position: none; }
@@ -102,16 +129,28 @@ body {
   background: no-repeat center center; }
   .grid-inside p.beerName {
     position: absolute;
-    font-size: 1.1em;
+    font-size: 1.05em;
     text-align: center;
     width: 90%;
     padding-left: 5%;
     padding-right: 5%;
-    bottom: 10%;
-    font-family: 'wisdom'; }
+    top: 79%;
+    font-family: wisdom; }
 
 .beerinfo {
-  display: none; }
+  margin: 5%;
+  margin-left: 30%;
+  margin-bottom: -25%;
+  height: 0%;
+  width: 0%;
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+  opacity: 0.0; }
+
+.beerinfo-selected {
+  display: block;
+  background: lime; }
 
 .hefe {
   background-color: #af8746;
@@ -215,11 +254,112 @@ body {
   background-size: 100%;
   background-color: lime; }
 
-#test {
-  height: 100%;
-  width: 16.666666%;
-  padding-bottom: 16.666666%;
-  float: left;
-  margin: 0;
-  background: lime;
-  transition: all 0.5s; }
+/***********************************************/
+/* iPads (portrait and landscape) ----------- */
+/**********************************************/
+/****************************************************/
+/* Smartphones (portrait and landscape) ----------- */
+/****************************************************/
+@media screen and (min-width: 320px) and (max-width: 568px) {
+  #title {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 25%;
+    background: url("../img/title-mobile.png") no-repeat #221f1f center;
+    background-size: 100%;
+    float: none; }
+
+  .grid {
+    height: 100%;
+    width: 100%;
+    padding-bottom: 25%;
+    margin: 0;
+    background: no-repeat center center;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; }
+
+  .grid-hover {
+    display: none; }
+
+  .grid-inside {
+    position: absolute;
+    width: 100%;
+    padding-bottom: 25%;
+    margin: 0;
+    background: no-repeat left center; }
+    .grid-inside p.beerName {
+      position: absolute;
+      font-size: 1.5em;
+      text-align: left;
+      width: 90%;
+      padding-left: 30%;
+      padding-right: 5%;
+      top: 45%;
+      font-family: wisdom;
+      color: lime; }
+
+  .hefe {
+    background-color: #af8746;
+    background-size: contain; }
+    .hefe .grid-inside {
+      background-size: contain; }
+      .hefe .grid-inside:hover {
+        background-size: contain;
+        background: url("../img/hefe.png"); }
+
+  .other {
+    background-color: #cbbda0;
+    background-size: contain; }
+    .other .grid-inside {
+      background-size: contain; }
+      .other .grid-inside:hover {
+        background-size: contain;
+        background: url("../img/other.png"); }
+
+  .pilsner {
+    background-color: #af8746;
+    background-size: contain; }
+    .pilsner .grid-inside {
+      background-size: contain; }
+      .pilsner .grid-inside:hover {
+        background-size: contain;
+        background: url("../img/pilsner.png"); }
+
+  .ale {
+    background-color: #993b31;
+    background-size: contain; }
+    .ale .grid-inside {
+      background-size: contain; }
+      .ale .grid-inside:hover {
+        background-size: contain;
+        background: url("../img/ale.png") no-repeat; }
+
+  .pale {
+    background-color: #993b31;
+    background-size: contain; }
+    .pale .grid-inside {
+      background-size: contain; }
+      .pale .grid-inside:hover {
+        background-size: contain;
+        background: url("../img/paleAle.png"); }
+
+  .porter {
+    background-color: #697587;
+    background-size: contain; }
+    .porter .grid-inside {
+      background-size: contain; }
+      .porter .grid-inside:hover {
+        background-size: contain;
+        background: url("../img/porter.png"); }
+
+  .stout {
+    background-color: #697587;
+    background-size: contain; }
+    .stout .grid-inside {
+      background-size: contain; }
+      .stout .grid-inside:hover {
+        background-size: contain;
+        background: url("../img/stout.png"); } }

@@ -9,7 +9,16 @@ $cActive: #F8CA4D;
 @font-face {
 	font-family: 'wisdom';
 	src: url('../fonts/WisdomScriptAJ.otf');
-	// src: local('Riesling Regular'), local('Riesling'), url('fonts/riesling.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Futura-Regular';
+	src: url('../fonts/FuturaLT.ttf');
+}
+
+@font-face {
+	font-family: 'Futura-Bold';
+	src: url('../fonts/FuturaLT-Bold.ttf');
 }
 
 
@@ -32,7 +41,7 @@ body {
 	width: 100%;
 	height: 100%;
 	background-color: $black;
-	opacity: 0.7;
+	opacity: 0.6;
 	transition: opacity .5s;
 }
 
@@ -54,30 +63,55 @@ body {
 }
 
 .extrainfo-visible {
-	height: 75%;
-	width: 16.666666%;
-	position: absolute;
+	height: 400px;
+	width: 500px;
+	top: 50%;
+	left: 50%;
+	margin-top: -200px;
+	margin-left: -250px;
+
+	border-radius: 3px;
+
+	position: fixed;
 	opacity: 1.0;
 	display: block;
 	transition: height 0.5s ease-out, opacity 0.8s ease-out;
 }
 
 #extrainfo {
-	font-family: Helvetica, Arial, sans-serif;
 	background-color: $black;
-	color: #fff;
-	h1 {
-		padding: 3%;
-	}
+	color: #F8CA4D;
+	overflow: scroll;
 
-	h3 {
-		padding: 3%;
+	h1 {
+		font-family: wisdom;
+		margin: 8%;
+		margin-bottom: 0;
+		padding-bottom: 1%;
+		border-bottom: 1px solid #F8CA4D;
 	}
 
 	p {
-		padding: 3%;
+		font-family: Futura-Regular;
+		margin: 2% 8%;
 	}
 }
+
+#closebutton {
+	background-image: url("../img/closebutton.png");
+	width: 20px;
+	height:20px;
+	position: fixed;
+	left: 50%;
+	margin-left: 220px;
+	margin-top: 10px;
+
+	&:hover {
+		background-image: url("../img/closebutton-hover.png");
+	}
+}
+
+
 
 .is-hidden {
 	position: none;
@@ -134,18 +168,32 @@ body {
 
 	p.beerName{
 		position: absolute;
-		font-size: 1.1em;
+		font-size: 1.05em;
 		text-align: center;
 		width: 90%;
 		padding-left: 5%;
 		padding-right: 5%; 
-		bottom: 10%;
-		font-family: 'wisdom';
+		top: 79%;
+		font-family: wisdom;
 	}
 }
 
 .beerinfo {
-	display: none;
+	margin: 5%;
+	margin-left: 30%;
+	margin-bottom: -25%;
+
+	height: 0%;
+	width: 0%;
+	position: absolute;
+	top: -99999px;
+	left: -99999px;
+	opacity: 0.0;
+}
+
+.beerinfo-selected {
+	display: block;
+	background: lime;
 }
 
 .hefe {
@@ -282,14 +330,161 @@ body {
 	background-color: lime;
 }
 
+/***********************************************/
+/* iPads (portrait and landscape) ----------- */
+/**********************************************/
 
+@media screen and (max-width : 1024px) {
 
-#test{
+}
+
+/****************************************************/
+/* Smartphones (portrait and landscape) ----------- */
+/****************************************************/
+
+@media screen and (min-width : 320px) and (max-width : 568px) {
+		#title {
+		max-width: 100%;
+		width: 100%;
+		height: 100%;
+		padding-bottom: 25%;
+		background: url('../img/title-mobile.png') no-repeat #221f1f center;
+		background-size: 100%;
+		float: none;
+	}
+
+	.grid {
 	height: 100%;
-	width: 16.666666%;
-	padding-bottom: 16.666666%;
-	float: left;
+	width: 100%;
+	padding-bottom: 25%;
 	margin: 0;
-	background: lime;
-	transition: all 0.5s;	
+	background: no-repeat center center;
+	overflow: hidden;
+	 -webkit-user-select: none;
+	 -moz-user-select: none;
+	 -ms-user-select: none;
+	}
+
+	.grid-hover {
+		display: none;
+	}
+
+
+	.grid-inside {
+		position: absolute;
+		width: 100%;
+		padding-bottom: 25%;
+		margin: 0;
+		background: no-repeat left center;
+
+		p.beerName{
+			position: absolute;
+			font-size: 1.5em;
+			text-align: left;
+			width: 90%;
+			padding-left: 30%;
+			padding-right: 5%; 
+			top: 45%;
+			font-family: wisdom;
+			color: lime;
+		}
+	}
+
+	.hefe {
+	background-color: $yellow;
+	background-size: contain;
+
+		.grid-inside {
+			background-size: contain;
+
+			&:hover {
+				background-size: contain;
+				background: url("../img/hefe.png");
+			}
+		}
+	}
+
+	.other {
+	background-color: $cBeige;
+	background-size: contain;
+
+		.grid-inside {
+			background-size: contain;
+						
+			&:hover {
+				background-size: contain;
+				background: url("../img/other.png");
+			}
+		}
+	}
+
+	.pilsner {
+	background-color: $yellow;
+	background-size: contain;
+
+		.grid-inside {
+			background-size: contain;
+
+			&:hover {
+				background-size: contain;
+				background: url("../img/pilsner.png");
+			}
+		}
+	}
+
+	.ale {
+	background-color: $orange;
+	background-size: contain;
+
+		.grid-inside {
+			background-size: contain;
+
+			&:hover {
+				background-size: contain;
+				background: url("../img/ale.png") no-repeat;
+			}
+		}
+	}
+
+	.pale {
+	background-color: $orange;
+	background-size: contain;
+
+		.grid-inside {
+			background-size: contain;
+
+			&:hover {
+				background-size: contain;
+				background: url("../img/paleAle.png");
+			}
+		}
+	}
+
+	.porter {
+	background-color: $navy;
+	background-size: contain;
+
+		.grid-inside {
+			background-size: contain;
+
+			&:hover {
+				background-size: contain;
+				background: url("../img/porter.png");
+			}
+		}
+	}
+
+	.stout {
+	background-color: $navy;
+	background-size: contain;
+
+			.grid-inside {
+			background-size: contain;
+
+			&:hover {
+				background-size: contain;
+				background: url("../img/stout.png");
+			}
+		}
+	}
 }

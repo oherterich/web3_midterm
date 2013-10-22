@@ -6,6 +6,14 @@ $black: #111111;
 $cBeige: #cbbda0;
 $cActive: #F8CA4D;
 
+$other: #F5E5C0;
+$ale: #EA8145;
+$pale: #EA6045;
+$pils: #F8CA4D;
+$hefe: #EDB20C;
+$porter: #3F5666;
+$stout: #2F3440;
+
 @font-face {
 	font-family: 'wisdom';
 	src: url('../fonts/WisdomScriptAJ.otf');
@@ -191,11 +199,6 @@ body {
 	opacity: 0.0;
 }
 
-.beerinfo-selected {
-	display: block;
-	background: lime;
-}
-
 .hefe {
 	background-color: $yellow;
 	background-size: 100%;
@@ -379,111 +382,132 @@ body {
 
 		p.beerName{
 			position: absolute;
-			font-size: 1.5em;
+			font-size: 1.4em;
 			text-align: left;
-			width: 90%;
-			padding-left: 30%;
-			padding-right: 5%; 
+			width: 60%;
+			padding-left: 33%;
+			padding-right: 10%; 
 			top: 45%;
 			font-family: wisdom;
-			color: lime;
 		}
 	}
 
 	.hefe {
-	background-color: $yellow;
+	background-color: $hefe;
 	background-size: contain;
+	color: $yellow;
 
 		.grid-inside {
 			background-size: contain;
+			background: url("../img/hefe_solid.png") no-repeat;
+			background-color: lime;
 
 			&:hover {
 				background-size: contain;
-				background: url("../img/hefe.png");
+				background: url("../img/hefe_solid.png") no-repeat;
+				color: $yellow;
 			}
 		}
 	}
 
 	.other {
-	background-color: $cBeige;
+	background-color: $other;
 	background-size: contain;
+	color: $cBeige;
 
 		.grid-inside {
 			background-size: contain;
+			background: url("../img/other_solid.png") no-repeat;
 						
 			&:hover {
 				background-size: contain;
-				background: url("../img/other.png");
+				background: url("../img/other_solid.png") no-repeat;
+				color: $cBeige;
 			}
 		}
 	}
 
 	.pilsner {
-	background-color: $yellow;
+	background-color: $pils;
 	background-size: contain;
+	color: $yellow;
 
 		.grid-inside {
 			background-size: contain;
+			background: url("../img/pilsner_solid.png") no-repeat;
 
 			&:hover {
 				background-size: contain;
-				background: url("../img/pilsner.png");
+				background: url("../img/pilsner_solid.png") no-repeat;
+				color: $yellow;
 			}
 		}
 	}
 
 	.ale {
-	background-color: $orange;
+	background-color: $ale;
 	background-size: contain;
+	color: $orange;
 
 		.grid-inside {
 			background-size: contain;
+			background: url("../img/ale_solid.png") no-repeat;
 
 			&:hover {
 				background-size: contain;
-				background: url("../img/ale.png") no-repeat;
+				background: url("../img/ale_solid.png") no-repeat;
+				color: $orange;
 			}
 		}
 	}
 
 	.pale {
-	background-color: $orange;
+	background-color: $pale;
 	background-size: contain;
+	color: $orange;
 
 		.grid-inside {
 			background-size: contain;
+			background: url("../img/paleAle_solid.png") no-repeat;
 
 			&:hover {
 				background-size: contain;
-				background: url("../img/paleAle.png");
+				background: url("../img/paleAle_solid.png") no-repeat;
+				color: $orange;
 			}
 		}
 	}
 
 	.porter {
-	background-color: $navy;
+	background-color: $porter;
 	background-size: contain;
+	color: $navy;
 
 		.grid-inside {
 			background-size: contain;
+			background: url("../img/porter_solid.png") no-repeat;
 
 			&:hover {
 				background-size: contain;
-				background: url("../img/porter.png");
+				background: url("../img/porter_solid.png") no-repeat;
+				color: $navy;
 			}
 		}
 	}
 
 	.stout {
-	background-color: $navy;
+	background-color: $stout;
 	background-size: contain;
+	color: $navy;
 
 			.grid-inside {
 			background-size: contain;
+			background: url("../img/stout_solid.png") no-repeat;
 
 			&:hover {
 				background-size: contain;
-				background: url("../img/stout.png");
+				background: url("../img/stout_solid.png") no-repeat;
+				color: $navy;
 			}
 		}
 	}

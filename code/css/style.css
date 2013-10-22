@@ -148,10 +148,6 @@ body {
   left: -99999px;
   opacity: 0.0; }
 
-.beerinfo-selected {
-  display: block;
-  background: lime; }
-
 .hefe {
   background-color: #af8746;
   background-size: 100%; }
@@ -292,74 +288,95 @@ body {
     background: no-repeat left center; }
     .grid-inside p.beerName {
       position: absolute;
-      font-size: 1.5em;
+      font-size: 1.4em;
       text-align: left;
-      width: 90%;
-      padding-left: 30%;
-      padding-right: 5%;
+      width: 60%;
+      padding-left: 33%;
+      padding-right: 10%;
       top: 45%;
-      font-family: wisdom;
-      color: lime; }
+      font-family: wisdom; }
 
   .hefe {
-    background-color: #af8746;
-    background-size: contain; }
+    background-color: #edb20c;
+    background-size: contain;
+    color: #af8746; }
     .hefe .grid-inside {
-      background-size: contain; }
+      background-size: contain;
+      background: url("../img/hefe_solid.png") no-repeat;
+      background-color: lime; }
       .hefe .grid-inside:hover {
         background-size: contain;
-        background: url("../img/hefe.png"); }
+        background: url("../img/hefe_solid.png") no-repeat;
+        color: #af8746; }
 
   .other {
-    background-color: #cbbda0;
-    background-size: contain; }
+    background-color: #f5e5c0;
+    background-size: contain;
+    color: #cbbda0; }
     .other .grid-inside {
-      background-size: contain; }
+      background-size: contain;
+      background: url("../img/other_solid.png") no-repeat; }
       .other .grid-inside:hover {
         background-size: contain;
-        background: url("../img/other.png"); }
+        background: url("../img/other_solid.png") no-repeat;
+        color: #cbbda0; }
 
   .pilsner {
-    background-color: #af8746;
-    background-size: contain; }
+    background-color: #f8ca4d;
+    background-size: contain;
+    color: #af8746; }
     .pilsner .grid-inside {
-      background-size: contain; }
+      background-size: contain;
+      background: url("../img/pilsner_solid.png") no-repeat; }
       .pilsner .grid-inside:hover {
         background-size: contain;
-        background: url("../img/pilsner.png"); }
+        background: url("../img/pilsner_solid.png") no-repeat;
+        color: #af8746; }
 
   .ale {
-    background-color: #993b31;
-    background-size: contain; }
+    background-color: #ea8145;
+    background-size: contain;
+    color: #993b31; }
     .ale .grid-inside {
-      background-size: contain; }
+      background-size: contain;
+      background: url("../img/ale_solid.png") no-repeat; }
       .ale .grid-inside:hover {
         background-size: contain;
-        background: url("../img/ale.png") no-repeat; }
+        background: url("../img/ale_solid.png") no-repeat;
+        color: #993b31; }
 
   .pale {
-    background-color: #993b31;
-    background-size: contain; }
+    background-color: #ea6045;
+    background-size: contain;
+    color: #993b31; }
     .pale .grid-inside {
-      background-size: contain; }
+      background-size: contain;
+      background: url("../img/paleAle_solid.png") no-repeat; }
       .pale .grid-inside:hover {
         background-size: contain;
-        background: url("../img/paleAle.png"); }
+        background: url("../img/paleAle_solid.png") no-repeat;
+        color: #993b31; }
 
   .porter {
-    background-color: #697587;
-    background-size: contain; }
+    background-color: #3f5666;
+    background-size: contain;
+    color: #697587; }
     .porter .grid-inside {
-      background-size: contain; }
+      background-size: contain;
+      background: url("../img/porter_solid.png") no-repeat; }
       .porter .grid-inside:hover {
         background-size: contain;
-        background: url("../img/porter.png"); }
+        background: url("../img/porter_solid.png") no-repeat;
+        color: #697587; }
 
   .stout {
-    background-color: #697587;
-    background-size: contain; }
+    background-color: #2f3440;
+    background-size: contain;
+    color: #697587; }
     .stout .grid-inside {
-      background-size: contain; }
+      background-size: contain;
+      background: url("../img/stout_solid.png") no-repeat; }
       .stout .grid-inside:hover {
         background-size: contain;
-        background: url("../img/stout.png"); } }
+        background: url("../img/stout_solid.png") no-repeat;
+        color: #697587; } }

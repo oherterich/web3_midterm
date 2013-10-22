@@ -6,14 +6,6 @@ $black: #111111;
 $cBeige: #cbbda0;
 $cActive: #F8CA4D;
 
-$other: #F5E5C0;
-$ale: #EA8145;
-$pale: #EA6045;
-$pils: #F8CA4D;
-$hefe: #EDB20C;
-$porter: #3F5666;
-$stout: #2F3440;
-
 @font-face {
 	font-family: 'wisdom';
 	src: url('../fonts/WisdomScriptAJ.otf');
@@ -199,6 +191,11 @@ body {
 	opacity: 0.0;
 }
 
+.beerinfo-selected {
+	display: block;
+	background: lime;
+}
+
 .hefe {
 	background-color: $yellow;
 	background-size: 100%;
@@ -346,7 +343,7 @@ body {
 /****************************************************/
 
 @media screen and (min-width : 320px) and (max-width : 568px) {
-		#title {
+	#title {
 		max-width: 100%;
 		width: 100%;
 		height: 100%;
@@ -366,6 +363,8 @@ body {
 	 -webkit-user-select: none;
 	 -moz-user-select: none;
 	 -ms-user-select: none;
+	border: 1px black solid;
+
 	}
 
 	.grid-hover {
@@ -379,135 +378,140 @@ body {
 		padding-bottom: 25%;
 		margin: 0;
 		background: no-repeat left center;
-
 		p.beerName{
 			position: absolute;
-			font-size: 1.4em;
+			font-size: 1.5em;
 			text-align: left;
-			width: 60%;
-			padding-left: 33%;
-			padding-right: 10%; 
-			top: 45%;
+			width: 65%;
+			padding-left: 30%;
+			padding-right: 5%; 
+			top: 25%;
 			font-family: wisdom;
 		}
 	}
 
 	.hefe {
-	background-color: $hefe;
+	background-color: $yellow;
 	background-size: contain;
-	color: $yellow;
 
 		.grid-inside {
 			background-size: contain;
-			background: url("../img/hefe_solid.png") no-repeat;
-			background-color: lime;
+			p.beerName{
+				color: #EFB952;
+			}
 
 			&:hover {
-				background-size: contain;
-				background: url("../img/hefe_solid.png") no-repeat;
-				color: $yellow;
+				background-size: contain !important;
+				background: url("../img/hefe.png") no-repeat;
 			}
 		}
 	}
 
 	.other {
-	background-color: $other;
+	background-color: $cBeige;
 	background-size: contain;
-	color: $cBeige;
 
 		.grid-inside {
 			background-size: contain;
-			background: url("../img/other_solid.png") no-repeat;
-						
+
+			p.beerName{
+				color: #F5E5C0;
+			}
+							
 			&:hover {
-				background-size: contain;
-				background: url("../img/other_solid.png") no-repeat;
-				color: $cBeige;
+				transition: all 0;
+				background-size: contain !important; 
+				background: url("../img/others.png") no-repeat;
+
 			}
 		}
 	}
 
 	.pilsner {
-	background-color: $pils;
+	background-color: $yellow;
 	background-size: contain;
-	color: $yellow;
 
 		.grid-inside {
 			background-size: contain;
-			background: url("../img/pilsner_solid.png") no-repeat;
+			p.beerName{
+				color: #F8CA4D;
+			}
 
 			&:hover {
-				background-size: contain;
-				background: url("../img/pilsner_solid.png") no-repeat;
-				color: $yellow;
+				background-size: contain !important;
+				background: url("../img/pilsner.png") no-repeat;
 			}
 		}
 	}
 
 	.ale {
-	background-color: $ale;
+	background-color: $orange;
 	background-size: contain;
-	color: $orange;
 
 		.grid-inside {
 			background-size: contain;
-			background: url("../img/ale_solid.png") no-repeat;
+			p.beerName{
+				color: #EA8145;
+			}
 
 			&:hover {
-				background-size: contain;
-				background: url("../img/ale_solid.png") no-repeat;
-				color: $orange;
+				background-size: contain !important;
+				background: url("../img/ale.png") no-repeat;
 			}
 		}
 	}
 
 	.pale {
-	background-color: $pale;
+	background-color: $orange;
 	background-size: contain;
-	color: $orange;
 
 		.grid-inside {
 			background-size: contain;
-			background: url("../img/paleAle_solid.png") no-repeat;
+			p.beerName{
+				color: #EA6045;
+			}
+
 
 			&:hover {
-				background-size: contain;
-				background: url("../img/paleAle_solid.png") no-repeat;
-				color: $orange;
+				background-size: contain !important;
+				background: url("../img/paleAle.png") no-repeat;
 			}
 		}
 	}
 
 	.porter {
-	background-color: $porter;
+	background-color: $navy;
 	background-size: contain;
-	color: $navy;
 
 		.grid-inside {
 			background-size: contain;
-			background: url("../img/porter_solid.png") no-repeat;
+			p.beerName{
+				color: #3F5666;
+			}
 
 			&:hover {
-				background-size: contain;
-				background: url("../img/porter_solid.png") no-repeat;
-				color: $navy;
+				transition: all 0;
+				background-size: contain !important;
+				background: url("../img/porter.png") no-repeat;
 			}
 		}
 	}
 
 	.stout {
-	background-color: $stout;
+	background-color: $navy;
 	background-size: contain;
-	color: $navy;
 
 			.grid-inside {
 			background-size: contain;
-			background: url("../img/stout_solid.png") no-repeat;
+			
+			p.beerName{
+				color: #2F3440;
+			}
 
 			&:hover {
-				background-size: contain;
-				background: url("../img/stout_solid.png") no-repeat;
-				color: $navy;
+				transition: all 0;
+				background-size: contain !important;
+				background: url("../img/stout.png") no-repeat;
 			}
 		}
 	}

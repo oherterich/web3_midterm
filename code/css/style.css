@@ -148,6 +148,10 @@ body {
   left: -99999px;
   opacity: 0.0; }
 
+.beerinfo-selected {
+  display: block;
+  background: lime; }
+
 .hefe {
   background-color: #af8746;
   background-size: 100%; }
@@ -275,7 +279,8 @@ body {
     overflow: hidden;
     -webkit-user-select: none;
     -moz-user-select: none;
-    -ms-user-select: none; }
+    -ms-user-select: none;
+    border: 1px black solid; }
 
   .grid-hover {
     display: none; }
@@ -288,95 +293,90 @@ body {
     background: no-repeat left center; }
     .grid-inside p.beerName {
       position: absolute;
-      font-size: 1.4em;
+      font-size: 1.5em;
       text-align: left;
-      width: 60%;
-      padding-left: 33%;
-      padding-right: 10%;
-      top: 45%;
+      width: 65%;
+      padding-left: 30%;
+      padding-right: 5%;
+      top: 25%;
       font-family: wisdom; }
 
   .hefe {
-    background-color: #edb20c;
-    background-size: contain;
-    color: #af8746; }
+    background-color: #af8746;
+    background-size: contain; }
     .hefe .grid-inside {
-      background-size: contain;
-      background: url("../img/hefe_solid.png") no-repeat;
-      background-color: lime; }
+      background-size: contain; }
+      .hefe .grid-inside p.beerName {
+        color: #EFB952; }
       .hefe .grid-inside:hover {
-        background-size: contain;
-        background: url("../img/hefe_solid.png") no-repeat;
-        color: #af8746; }
+        background-size: contain !important;
+        background: url("../img/hefe.png") no-repeat; }
 
   .other {
-    background-color: #f5e5c0;
-    background-size: contain;
-    color: #cbbda0; }
+    background-color: #cbbda0;
+    background-size: contain; }
     .other .grid-inside {
-      background-size: contain;
-      background: url("../img/other_solid.png") no-repeat; }
+      background-size: contain; }
+      .other .grid-inside p.beerName {
+        color: #F5E5C0; }
       .other .grid-inside:hover {
-        background-size: contain;
-        background: url("../img/other_solid.png") no-repeat;
-        color: #cbbda0; }
+        transition: all 0;
+        background-size: contain !important;
+        background: url("../img/others.png") no-repeat; }
 
   .pilsner {
-    background-color: #f8ca4d;
-    background-size: contain;
-    color: #af8746; }
+    background-color: #af8746;
+    background-size: contain; }
     .pilsner .grid-inside {
-      background-size: contain;
-      background: url("../img/pilsner_solid.png") no-repeat; }
+      background-size: contain; }
+      .pilsner .grid-inside p.beerName {
+        color: #F8CA4D; }
       .pilsner .grid-inside:hover {
-        background-size: contain;
-        background: url("../img/pilsner_solid.png") no-repeat;
-        color: #af8746; }
+        background-size: contain !important;
+        background: url("../img/pilsner.png") no-repeat; }
 
   .ale {
-    background-color: #ea8145;
-    background-size: contain;
-    color: #993b31; }
+    background-color: #993b31;
+    background-size: contain; }
     .ale .grid-inside {
-      background-size: contain;
-      background: url("../img/ale_solid.png") no-repeat; }
+      background-size: contain; }
+      .ale .grid-inside p.beerName {
+        color: #EA8145; }
       .ale .grid-inside:hover {
-        background-size: contain;
-        background: url("../img/ale_solid.png") no-repeat;
-        color: #993b31; }
+        background-size: contain !important;
+        background: url("../img/ale.png") no-repeat; }
 
   .pale {
-    background-color: #ea6045;
-    background-size: contain;
-    color: #993b31; }
+    background-color: #993b31;
+    background-size: contain; }
     .pale .grid-inside {
-      background-size: contain;
-      background: url("../img/paleAle_solid.png") no-repeat; }
+      background-size: contain; }
+      .pale .grid-inside p.beerName {
+        color: #EA6045; }
       .pale .grid-inside:hover {
-        background-size: contain;
-        background: url("../img/paleAle_solid.png") no-repeat;
-        color: #993b31; }
+        background-size: contain !important;
+        background: url("../img/paleAle.png") no-repeat; }
 
   .porter {
-    background-color: #3f5666;
-    background-size: contain;
-    color: #697587; }
+    background-color: #697587;
+    background-size: contain; }
     .porter .grid-inside {
-      background-size: contain;
-      background: url("../img/porter_solid.png") no-repeat; }
+      background-size: contain; }
+      .porter .grid-inside p.beerName {
+        color: #3F5666; }
       .porter .grid-inside:hover {
-        background-size: contain;
-        background: url("../img/porter_solid.png") no-repeat;
-        color: #697587; }
+        transition: all 0;
+        background-size: contain !important;
+        background: url("../img/porter.png") no-repeat; }
 
   .stout {
-    background-color: #2f3440;
-    background-size: contain;
-    color: #697587; }
+    background-color: #697587;
+    background-size: contain; }
     .stout .grid-inside {
-      background-size: contain;
-      background: url("../img/stout_solid.png") no-repeat; }
+      background-size: contain; }
+      .stout .grid-inside p.beerName {
+        color: #2F3440; }
       .stout .grid-inside:hover {
-        background-size: contain;
-        background: url("../img/stout_solid.png") no-repeat;
-        color: #697587; } }
+        transition: all 0;
+        background-size: contain !important;
+        background: url("../img/stout.png") no-repeat; } }

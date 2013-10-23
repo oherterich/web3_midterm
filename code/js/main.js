@@ -174,7 +174,9 @@ for (var i = 0; i < grid.length; i++) {
 			var beerinfo = this.getElementsByClassName('beerinfo');
 			beerinfo = beerinfo[0];
 			beerinfo.style.width = "60%";
-			beerinfo.style.height = "200px";
+			beerinfo.style.height = "100%";
+			var infoHeight = beerinfo.clientHeight;
+			beerinfo.style.height = infoHeight + "px";
 			beerinfo.style.opacity = "1.0";
 		}
 

@@ -362,7 +362,7 @@ body {
     margin-bottom: -20%;
     margin-top: 21%;
     overflow: scroll;
-    transition: height 1.0s, opacity 1.0s; }
+    transition: height 0.5s, opacity 0.7s; }
     .beerinfo h1 {
       display: none; }
     .beerinfo p {

@@ -25,20 +25,25 @@ Web 3 Midterm project for Owen Herterich &amp; Gustavo Faria
 [ DONE ] style tablet
 [ DONE ] change percentage of beer foam
 [ DONE ] make sure HTML validates
+[ DONE ] actually check to see if it works on a phone or tablet
+[ DONE ] make it responsive
+[ DONE ] fix hover issue when screen is smaller
+[ DONE ] fix footer/info box in mobile
+[ DONE ] make the grid elements have a "link" effect with cursor?
+
+[ DONE ] be responsible
+[ DONE ] keep it real
+[ DONE ] fix the logo
 
 ***REQUIRED***
-[ owen/gus ] fix footer/info box in mobile
-[ owen/gus ] fix hover issue when screen is smaller
-[ owen/gus ] actually check to see if it works on a phone or tablet
+
 [ owen/gus ] upload dat shit
 
 ***OPTIONAL***
-[ owen/gus ] make the grid elements have a "link" effect with cursor?
+[ owen/gus ] fancy box border
 [ owen/gus ] give the mobile info boxes a border-bottom between name and info
 [ owen/gus ] hover is weird in firefox
 
-[ DONE ] make it responsive
-[ owen + gus ] be responsible
-[ owen + gus ] keep it real
+
 
 ====================================================================================

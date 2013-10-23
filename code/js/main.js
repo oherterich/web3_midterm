@@ -110,8 +110,12 @@ main_section.appendChild(overlay);
 //CREATE EXTRA INFO BAR
 var extrainfo = document.createElement( 'div' );
 extrainfo.className = 'extrainfo-hidden';
-extrainfo.id = 'extrainfo'
+extrainfo.id = 'extrainfo';
 main_section.appendChild(extrainfo);
+
+var extrainfoBG = document.createElement('div');
+extrainfoBG.id = 'extrainfoBG';
+extrainfo.appendChild(extrainfoBG);
 
 //CREATE BEER AFTER BEER INFO DIV
 var infoDiv = document.createElement( 'div');

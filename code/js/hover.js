@@ -7,9 +7,10 @@ for (var i = 0; i < grid.length; i++) {
 		// 	test.firstChild.style.background="lime";
 
 		 //var gHover = this.getElementsByClassName('grid-hover');
-		 var gHover = this.querySelector('.grid-hover');
-		 // gHover.style.paddingTop = 16.666666+'%';
-		 gHover.style.height = 30 + '%';
+		var gHover = this.querySelector('.grid-hover');
+		gHover.style.height = 10 + '%';
+		gHover.style.paddingBottom = 10+'%';
+
 		 gHover.style.marginTop = 0;
 
 	});
@@ -20,5 +21,7 @@ for (var i = 0; i < grid.length; i++) {
 			// gHover.style.marginTop = 16.666666+'%';
 			gHover.style.height = 0 + '%';
 		 	gHover.style.marginTop = 16.666666 + '%';
+		 	gHover.style.paddingBottom = 0;
+
 	});
 }

@@ -93,8 +93,6 @@ for(var i=0; i < data.length; i++){
 	 if (pale != -1) {
 	 	grid.classList.add('pale');
 	 }
-	 var name = data[i].name;
-	 console.log(name + " " + ale + " " + pale + " " + sto + " " + port + " " + hefe + " " + pils);
 
 	beerinfo.appendChild(beerName);
 	beerinfo.appendChild(abv);
@@ -114,8 +112,6 @@ var extrainfo = document.createElement( 'div' );
 extrainfo.className = 'extrainfo-hidden';
 extrainfo.id = 'extrainfo'
 main_section.appendChild(extrainfo);
-console.log(extrainfo);
-
 
 //SET VARIABLE
 var overlay = document.getElementById('overlay');
@@ -163,16 +159,23 @@ for (var i = 0; i < grid.length; i++) {
 
 		//FOR MOBILE ONLY
 		if (window.innerWidth <= 480) {
+
+			//SET EVERY GRID ITEM'S INFO BACK TO INVISIBLE...
+			for (var j = 0; j < grid.length; j++) {
+				var g = grid.item(j);
+				var allOtherGrid = g.getElementsByClassName('beerinfo');
+				allOtherGrid = allOtherGrid[0];
+				allOtherGrid.style.width = "0px";
+				allOtherGrid.style.height = "0px";
+				allOtherGrid.style.opacity = "0.0";
+			}
+
+			//...AND SET THE CURRENT ONE TO VISIBLE
 			var beerinfo = this.getElementsByClassName('beerinfo');
 			beerinfo = beerinfo[0];
-			beerinfo.style.width = "100%";
-			beerinfo.style.height = "100%";
+			beerinfo.style.width = "60%";
+			beerinfo.style.height = "200px";
 			beerinfo.style.opacity = "1.0";
-
-			var top = beerinfo.offsetTop;
-			console.log(top);
-			beerinfo.style.top = top + "px";
-			beerinfo.style.left = "0px";
 		}
 
 	});

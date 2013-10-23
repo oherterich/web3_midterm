@@ -21,10 +21,21 @@ Web 3 Midterm project for Owen Herterich &amp; Gustavo Faria
 [ DONE ] add in solid images
 [ DONE ] invert colors
 [ DONE ] add drop down info
-[ owen ] add footer/info box
-[ owen ] style tablet
+[ DONE ] add footer/info box
+[ DONE ] style tablet
 [ DONE ] change percentage of beer foam
 [ DONE ] make sure HTML validates
+
+***REQUIRED***
+[ owen/gus ] fix footer/info box in mobile
+[ owen/gus ] fix hover issue when screen is smaller
+[ owen/gus ] actually check to see if it works on a phone or tablet
+[ owen/gus ] upload dat shit
+
+***OPTIONAL***
+[ owen/gus ] make the grid elements have a "link" effect with cursor?
+[ owen/gus ] give the mobile info boxes a border-bottom between name and info
+[ owen/gus ] hover is weird in firefox
 
 [ DONE ] make it responsive
 [ owen + gus ] be responsible

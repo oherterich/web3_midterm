@@ -29,6 +29,11 @@ $stout: #2F3440;
 	src: url('../fonts/FuturaLT-Bold.ttf');
 }
 
+@font-face {
+	font-family: 'Futura-LightOblique';
+	src: url('../fonts/FuturaLT-LightOblique.ttf');
+}
+
 
 * { margin: 0; padding: 0;}
 
@@ -99,9 +104,35 @@ body {
 		border-bottom: 1px solid #F8CA4D;
 	}
 
+	h3 {
+		font-family: 'Futura-LightOblique';
+		font-size: 0.9rem;
+		margin: 3% 8%;
+	}
+
 	p {
 		font-family: Futura-Regular;
 		margin: 2% 8%;
+
+		a:link {
+			text-decoration: none;
+			color: #F7E3B0;
+		}
+
+		a:visited {
+			text-decoration: none;
+			color: #F7E3B0;
+		}
+
+		a:hover {
+			border-bottom: 1px solid #F7E3B0;
+		}
+	}
+
+	#author {
+		font-family: 'Futura-Regular';
+		margin: -1% 0 3% 40%;
+		font-size: 0.8rem;
 	}
 }
 
@@ -338,6 +369,18 @@ body {
 	background-color: lime;
 }
 
+#additional-info {
+	background: url("../img/info.png") no-repeat;
+	transition: background 0.7s;
+	background-size: 100%;
+
+	&:hover {
+		background: url("../img/info-hover.png") no-repeat;
+		transition: background 0.7s;
+		background-size: 100%;
+	}
+}
+
 /***********************************************/
 /* iPads (portrait and landscape) ----------- */
 /**********************************************/
@@ -486,8 +529,7 @@ body {
 		left: 0;
 		padding-left: 30%;
 		margin-bottom: -19%;
-		margin-top: 21%;
-		overflow: scroll;
+		margin-top: 23%;
 
 		transition: height 0.5s, opacity 0.7s;
 

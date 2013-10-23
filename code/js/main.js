@@ -113,12 +113,23 @@ extrainfo.className = 'extrainfo-hidden';
 extrainfo.id = 'extrainfo'
 main_section.appendChild(extrainfo);
 
+//CREATE BEER AFTER BEER INFO DIV
+var infoDiv = document.createElement( 'div');
+infoDiv.className = 'grid';
+infoDiv.id = 'additional-info';
+main_section.appendChild(infoDiv);
+
+var info = "<h1>Information</h1><h3>Fill with mingled cream and amber,<br/>I will drain that glass again.<br/>Such hilarious visions clamber<br/>Through the chamber of my brain.<br/>Quaintest thoughts, queerest fancies<br/>Come to life and fade away.<br/>What care I how time advances;<br/>I am drinking ale today.</h3><p id='author'>Lines on Ale (1848), by Edgar Allen Poe</p><p>Beer After Beer is a website dedicated to everyone's favorite fermented friend. It takes in information from Pint Labs' <a href='http://www.brewerydb.com/'>BreweryDB</a> and displays it in a stylish and accessible manner.</p><p>Beer After Beer was developed by Gustavo Faria and Owen Herterich, two beer drinkers and designers trying to share their love with the world.</p>";
+var beerinfo =document.createElement('div');
+beerinfo.className = 'beerinfo';
+beerinfo.innerHTML = info;
+
+infoDiv.appendChild(beerinfo);
+
 //SET VARIABLE
 var overlay = document.getElementById('overlay');
 var extrainfo = document.getElementById('extrainfo');
 var grid = document.getElementsByClassName('grid');
-
-
 
 //SET HEIGHT OF OVERLAY
 var body = document.getElementsByTagName('body');
@@ -131,6 +142,8 @@ var overlay = document.getElementById('overlay');
 var extrainfo = document.getElementById('extrainfo');
 
 var grid = document.getElementsByClassName('grid');
+
+var mobilePreviousBeer; //This variable allows us to close the last active beer on click without keeping it open
 
 for (var i = 0; i < grid.length; i++) {
 	var s = grid.item(i);
@@ -160,24 +173,32 @@ for (var i = 0; i < grid.length; i++) {
 		//FOR MOBILE ONLY
 		if (window.innerWidth <= 480) {
 
+
 			//SET EVERY GRID ITEM'S INFO BACK TO INVISIBLE...
 			for (var j = 0; j < grid.length; j++) {
 				var g = grid.item(j);
 				var allOtherGrid = g.getElementsByClassName('beerinfo');
 				allOtherGrid = allOtherGrid[0];
-				allOtherGrid.style.width = "0px";
+				allOtherGrid.style.width = "-100px";
 				allOtherGrid.style.height = "0px";
 				allOtherGrid.style.opacity = "0.0";
 			}
 
-			//...AND SET THE CURRENT ONE TO VISIBLE
-			var beerinfo = this.getElementsByClassName('beerinfo');
-			beerinfo = beerinfo[0];
-			beerinfo.style.width = "60%";
-			beerinfo.style.height = "100%";
-			var infoHeight = beerinfo.clientHeight;
-			beerinfo.style.height = infoHeight + "px";
-			beerinfo.style.opacity = "1.0";
+			if (this != mobilePreviousBeer) {
+				//...AND SET THE CURRENT ONE TO VISIBLE
+				var beerinfo = this.getElementsByClassName('beerinfo');
+				beerinfo = beerinfo[0];
+				beerinfo.style.width = "60%";
+				beerinfo.style.height = "100%";
+				var infoHeight = beerinfo.clientHeight;
+				beerinfo.style.height = infoHeight + "px";
+				beerinfo.style.opacity = "1.0";
+				mobilePreviousBeer = this;
+			}
+			else {
+				mobilePreviousBeer = 0;
+			}
+
 		}
 
 	});

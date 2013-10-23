@@ -473,27 +473,19 @@ body {
 			padding-right: 5%; 
 			top: 35%;
 			font-family: wisdom;
+			line-height: 1.7rem;
 		}
 	}
 
 	.beerinfo {
-		/*margin: 5%;
-		margin-left: 30%;
-		margin-bottom: -25%;
 
-		height: 0%;
-		width: 0%;
-		position: absolute;
-		top: -99999px;
-		left: -99999px;
-		opacity: 0.0;*/
 		display: block;
 		position: relative;
 		margin: 0;
 		top: 0;
 		left: 0;
 		padding-left: 30%;
-		margin-bottom: -20%;
+		margin-bottom: -19%;
 		margin-top: 21%;
 		overflow: scroll;
 
@@ -506,6 +498,7 @@ body {
 		p {
 			font-family: 'Futura-Regular';
 			font-size: 0.9rem;
+			margin: 3% 0;
 		}
 	}
 

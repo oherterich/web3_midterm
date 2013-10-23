@@ -20,7 +20,7 @@ Web 3 Midterm project for Owen Herterich &amp; Gustavo Faria
 [ DONE ] add favicon
 [ DONE ] add in solid images
 [ DONE ] invert colors
-[ owen ] add drop down info
+[ DONE ] add drop down info
 [ owen ] add footer/info box
 [ owen ] style tablet
 [ DONE ] change percentage of beer foam
